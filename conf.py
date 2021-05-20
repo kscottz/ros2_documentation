@@ -112,12 +112,12 @@ templates_path = [
 
 # smv_tag_whitelist = None
 
-smv_branch_whitelist = r'^(rolling|foxy|eloquent|dashing|crystal)$'
+smv_branch_whitelist = r'^(rolling|galactic|foxy|eloquent|dashing|crystal)$'
 
 
 smv_released_pattern = r'^refs/(heads|remotes/[^/]+)/(foxy|eloquent|dashing|crystal).*$'
 smv_remote_whitelist = r'^(origin)$'
-smv_latest_version = 'foxy'
+smv_latest_version = 'galactic'
 
 
 

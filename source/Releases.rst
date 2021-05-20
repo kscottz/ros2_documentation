@@ -113,6 +113,7 @@ Rows in the table marked in green are the currently supported distributions.
           <th class="distroclass"><p>Distro</p></th>
           <th class="distroclass"><p>Release date</p></th>
           <th class="distroclass"><p>Logo</p></th>
+	  <th class="distroclass"><p>Icon</p></th>	  
           <th class="distroclass"><p>EOL Date</p></th>
         </tr>
       </thead>
@@ -120,66 +121,77 @@ Rows in the table marked in green are the currently supported distributions.
         <tr class="active">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Release-Galactic-Geochelone.html">Galactic Geochelone</a></p></td>
           <td class="distroclass"><p>May 23, 2021</p></td>
-          <td class="distroclass"><p></p></td>
+          <td class="distroclass"><p></p><img alt="Galactic Logo" src="_images/galactic-small.png" /></p></td>
+	  <td class="distroclass"><p><img alt="Galactic Icon" src="_images/galactic.png" /></p></td>
           <td class="distroclass"><p>November 2022</p></td>
         </tr>
         <tr class="active">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Release-Foxy-Fitzroy.html">Foxy Fitzroy</a></p></td>
           <td class="distroclass"><p>June 5, 2020</p></td>
           <td class="distroclass"><p><img alt="Foxy logo" src="_images/foxy-small.png" /></p></td>
-          <td class="distroclass"><p>May 2023</p></td>
+	  <td class="distroclass"><p><img alt="Foxy Icon" src="_images/foxy.png" /></p></td>
+	  <td class="distroclass"><p>May 2023</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Release-Eloquent-Elusor.html">Eloquent Elusor</a></p></td>
           <td class="distroclass"><p>November 22nd, 2019</p></td>
           <td class="distroclass"><p><img alt="Eloquent logo" src="_images/eloquent-small.png" /></p></td>
-          <td class="distroclass"><p>November 2020</p></td>
+	  <td class="distroclass"><p><img alt="Eloquent Icon" src="_images/eloquent.png" /></p></td>
+        <td class="distroclass"><p>November 2020</p></td>
         </tr>
         <tr class="active">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Release-Dashing-Diademata.html">Dashing Diademata</a></p></td>
           <td class="distroclass"><p>May 31st, 2019</p></td>
-          <td class="distroclass"><p><img alt="Dashing logo" src="_images/dashing-small.png" /></p></td>
-          <td class="distroclass"><p>May 2021</p></td>
+	  <td class="distroclass"><p><img alt="Dashing logo" src="_images/dashing-small.png" /></p></td>
+	  <td class="distroclass"><p><img alt="Dashing Icon" src="_images/dashing.png" /></p></td>
+	  <td class="distroclass"><p>May 2021</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Release-Crystal-Clemmys.html">Crystal Clemmys</a></p></td>
           <td class="distroclass"><p>December 14th, 2018</p></td>
           <td class="distroclass"><p><img alt="Crystal logo" src="_images/crystal-small.png" /></p></td>
-          <td class="distroclass"><p>December 2019</p></td>
+	  <td class="distroclass"><p><img alt="Crystal Icon" src="_images/crystal.png" /></p></td>
+	  <td class="distroclass"><p>December 2019</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Release-Bouncy-Bolson.html">Bouncy Bolson</a></p></td>
           <td class="distroclass"><p>July 2nd, 2018</p></td>
-          <td class="distroclass"><p><img alt="Bouncy logo" src="_images/bouncy-small.png" /></p></td>
-          <td class="distroclass"><p>July 2019</p></td>
+	  <td class="distroclass"><p><img alt="Bouncy logo" src="_images/bouncy-small.png" /></p></td>
+	  <td class="distroclass"><p><img alt="Bouncy Icon" src="_images/bouncy.png" /></p></td>
+        <td class="distroclass"><p>July 2019</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Release-Ardent-Apalone.html">Ardent Apalone</a></p></td>
           <td class="distroclass"><p>December 8th, 2017</p></td>
           <td class="distroclass"><p><img alt="Ardent logo" src="_images/ardent-small.png" /></p></td>
-          <td class="distroclass"><p>December 2018</p></td>
+	  <td class="distroclass"><p><img alt="Ardent Icon" src="_images/ardent.png" /></p></td>
+	  <td class="distroclass"><p>December 2018</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Beta3-Overview.html">beta3</a></p></td>
           <td class="distroclass"><p>September 13th, 2017</p></td>
           <td class="distroclass"/>
+	  <td class="distroclass"><p></p></td>
           <td class="distroclass"><p>December 2017</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Beta2-Overview.html">beta2</a></p></td>
           <td class="distroclass"><p>July 5th, 2017</p></td>
           <td class="distroclass"/>
+	  <td class="distroclass"><p></p></td>
           <td class="distroclass"><p>September 2017</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Beta1-Overview.html">beta1</a></p></td>
           <td class="distroclass"><p>December 19th, 2016</p></td>
+	  <td class="distroclass"><p></p></td>
           <td class="distroclass"/>
           <td class="distroclass"><p>July 2017</p></td>
         </tr>
         <tr class="distroclass">
           <td class="distroclass"><p><a class="reference internal" href="Releases/Alpha-Overview.html">alpha1 - alpha8</a></p></td>
           <td class="distroclass"><p>August 31st, 2015</p></td>
+	  <td class="distroclass"><p></p></td>
           <td class="distroclass"/>
           <td class="distroclass"><p>December 2016</p></td>
         </tr>
