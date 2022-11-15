@@ -20,7 +20,7 @@ Packages relevant to this ROS 2 TSC are listed in `REP 2005 <https://www.ros.org
 
 Meeting notes can be found on `ROS Discourse <https://discourse.ros.org/tag/tsc>`_.
 
-The current members of the ROS 2 TSC are (22 as of 2021-11-29):
+The current members of the ROS 2 TSC are (23 as of 2022-02-01):
 
 .. |adlink| image:: Governance/adlink.png
 .. |amazon| image:: Governance/amazon.svg
@@ -31,7 +31,6 @@ The current members of the ROS 2 TSC are (22 as of 2021-11-29):
 .. |gvsc| image:: Governance/gvsc.png
 .. |intel| image:: Governance/intel.svg
 .. |irobot| image:: Governance/irobot.png
-.. |lge| image:: Governance/lge.svg
 .. |microsoft| image:: Governance/microsoft.svg
 .. |openrobotics| image:: Governance/openrobotics-logo-stacked.png
 .. |picknik| image:: Governance/picknik.png
@@ -42,6 +41,7 @@ The current members of the ROS 2 TSC are (22 as of 2021-11-29):
 .. |sony| image:: Governance/sony.png
 .. |tri| image:: Governance/tri_logo_landscape-web.svg
 .. |windriver| image:: Governance/windriver.png
+.. |foxglove| image:: Governance/foxglove.png
 
 .. raw:: html
 
@@ -130,10 +130,6 @@ The current members of the ROS 2 TSC are (22 as of 2021-11-29):
           <td class="tscclass" align="center"><p>iRobot: Alberto Soragna</p></td>
         </tr>
         <tr class="tscclass">
-          <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.lg.com"><img alt="LG Electronics logo" src="_images/lge.svg" style="height: 35px;" /></a></p></td>
-          <td class="tscclass" align="center"><p>LG Electronics: Herb Kuta</p></td>
-        </tr>
-        <tr class="tscclass">
           <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.microsoft.com"><img alt="Microsoft logo" src="_images/microsoft.svg" style="height: 35px;" /></a></p></td>
           <td class="tscclass" align="center"><p>Microsoft: Lou Amadio</p></td>
         </tr>
@@ -143,7 +139,7 @@ The current members of the ROS 2 TSC are (22 as of 2021-11-29):
         </tr>
         <tr class="tscclass">
           <td class="tscclass" align="center"><p><a class="reference internal" href="https://picknik.ai"><img alt="PickNik logo" src="_images/picknik.png" style="height: 35px;" /></a></p></td>
-          <td class="tscclass" align="center"><p>PickNik: Dave Coleman</p></td>
+          <td class="tscclass" align="center"><p>PickNik: Henning Kayser</p></td>
         </tr>
         <tr class="tscclass">
           <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.robotis.com"><img alt="ROBOTIS logo" src="_images/robotis.png" style="height: 35px;" /></a></p></td>
@@ -168,6 +164,10 @@ The current members of the ROS 2 TSC are (22 as of 2021-11-29):
         <tr class="tscclass">
           <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.windriver.com"><img alt="Wind River logo" src="_images/windriver.png" style="height: 60px;" /></a></p></td>
           <td class="tscclass" align="center"><p>Wind River: Andrei Kholodnyi</p></td>
+        </tr>
+        <tr class="tscclass">
+          <td class="tscclass" align="center"><p><a class="reference internal" href="https://www.foxglove.dev"><img alt="Foxglove logo" src="_images/foxglove.png" style="height: 60px;" /></a></p></td>
+          <td class="tscclass" align="center"><p>Foxglove:  Adrian Macneil</p></td>
         </tr>
         <tr class="tscclass">
           <td class="tscclass" align="center"><p><img alt="ROS 2 logo" src="_images/ros2_logo.png" style="height: 60px;" /></p></td>
@@ -199,7 +199,18 @@ Working Groups (WGs)
 
 As described in its :doc:`charter <Governance/ROS2-TSC-Charter>`, the TSC establishes working groups (WGs) to discuss and make progress on specific topics.
 
-The current WGs are (11 as of 2021-01-12):
+The current WGs are (12 as of 2021-01-12):
+
+Client Libraries
+^^^^^^^^^^^^^^^^
+
+* Lead(s): Geoffrey Biggs, Alberto Soragna
+* Resources:
+
+ * Meeting invite group: `ros-client-libraries-working-group-invites@googlegroups.com <https://groups.google.com/forum/#!forum/ros-client-libraries-working-group-invites>`_
+ * `Meeting minutes and agendas <https://docs.google.com/document/d/1UXWaEkT6ji0Z0uTtJJSni5Y6fiopM9qOOzv4ldeNaAM/edit>`_
+ * Working group charter: https://github.com/ros2-client-libraries-wg/community
+ * Discourse tag: `wg-client-libraries <https://discourse.ros.org/tags/wg-client-libraries>`_
 
 Control
 ^^^^^^^
@@ -275,17 +286,6 @@ Real-time
  * Discourse tag: `wg-real-time <https://discourse.ros.org/tags/wg-real-time>`_
  * Matrix chat `+ros-realtime:matrix.org <https://matrix.to/#/+ros-realtime:matrix.org>`_
 
-Rust
-^^^^
-
-* Lead(s): Ruffin White, Geoffrey Biggs
-* Resources:
-
- * `Working group Community <https://github.com/ros2-rust/rust-wg>`__
- * Meeting invite group `ros-rust-working-group-invites@googlegroups.com <https://groups.google.com/forum/#!forum/ros-rust-working-group-invites>`_
- * Discourse tag: `wg-rust <https://discourse.ros.org/tags/wg-rust>`_
- * Matrix chat `+rosorg-rust:matrix.org <https://matrix.to/#/+rosorg-rust:matrix.org>`_
-
 Safety
 ^^^^^^
 
@@ -347,6 +347,17 @@ Hardware Acceleration
  * Meeting invite group `ROS 2 Hardware Acceleration WG Google Group <https://groups.google.com/g/ros-2-hardware-acceleration-wg>`_
  * Discourse tag: `wg-acceleration <https://discourse.ros.org/tag/wg-acceleration>`_
  * Github organization: `ros-acceleration <https://github.com/ros-acceleration>`_
+
+Rust
+^^^^
+
+* Lead(s): Esteve Fernandez, Jacob Hassold
+* Resources:
+
+ * `Working group Community <https://github.com/ros2-rust/rust-wg>`__
+ * Meeting invite group `ros-rust-working-group-invites@googlegroups.com <https://groups.google.com/forum/#!forum/ros-rust-working-group-invites>`_
+ * Discourse tag: `wg-rust <https://discourse.ros.org/tags/wg-rust>`_
+ * Matrix chat `+rosorg-rust:matrix.org <https://matrix.to/#/+rosorg-rust:matrix.org>`_
 
 
 If you'd like to join an existing ROS 2 WG, please contact the appropriate group lead(s) directly.
