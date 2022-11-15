@@ -6,7 +6,8 @@
 Building RQt from source
 ========================
 
-We've provided our development setup here to aid future users in easily extending RQt by creating their own plugins. We encourage you to contribute those plugins back to the ``ros-visualization`` GitHub repository!
+We've provided our development setup here to aid future users in easily extending RQt by creating their own plugins.
+We encourage you to contribute those plugins back to the ``ros-visualization`` GitHub repository!
 
 System Requirements
 -------------------
@@ -34,14 +35,14 @@ Download RQt Repositories
 .. code-block:: bash
 
    cd ~/ros2_ws
-   wget https://raw.githubusercontent.com/PickNikRobotics/rqt2_setup/master/rqt2.repos
-   vcs import src --force < rqt2.repos
+   vcs import --force --input https://raw.githubusercontent.com/PickNikRobotics/rqt2_setup/master/rqt2.repos src
 
 As an alternative to the hosted ``.repos`` file you can use ``rosinstall_generator`` to generate a custom one:
 
 .. code-block:: bash
 
    rosinstall_generator --rosdistro crystal --upstream-development --repos python_qt_binding qt_gui_core rqt <more-repos-with-rqt-plugins> > rqt2.repos
+   vcs import --force src < rqt2.repos
 
 Install Dependencies
 ^^^^^^^^^^^^^^^^^^^^
@@ -56,7 +57,7 @@ For non-Linux platforms, see the :doc:`macOS RQt source install page <RQt-Source
 
 .. code-block:: bash
 
-   rosdep install --from-paths src --ignore-src --rosdistro bouncy -y --skip-keys "console_bridge fastcdr fastrtps rti-connext-dds-5.3.1 urdfdom_headers"
+   rosdep install --from-paths src --ignore-src --rosdistro bouncy -y --skip-keys "console_bridge fastcdr fastrtps rti-connext-dds-6.0.1 urdfdom_headers"
 
 Build The Workspace
 ^^^^^^^^^^^^^^^^^^^

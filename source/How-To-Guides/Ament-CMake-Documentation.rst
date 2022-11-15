@@ -8,7 +8,7 @@ ament_cmake user documentation
 
 ament_cmake is the build system for CMake based packages in ROS 2 (in particular, it will be used for most if not all C/C++ projects).
 It is a set of scripts enhancing CMake and adding convenience functionality for package authors.
-Knowing the basics of `CMake <https://cmake.org/cmake/help/v3.5/>`__ will be very helpful, an official tutorial can be found `here <https://cmake.org/cmake-tutorial/>`__.
+Knowing the basics of `CMake <https://cmake.org/cmake/help/v3.5/>`__ will be very helpful, an official tutorial can be found `here <https://cmake.org/cmake/help/latest/guide/tutorial/index.html>`__.
 
 .. contents:: Table of Contents
    :depth: 2
@@ -170,7 +170,7 @@ Here is what's happening in the snippet above:
    This is because the CMake subdirectory has no way of setting necessary variables in the parent scope where ``ament_package`` is called.
 
 - The last large install command installs the library.
-  Archives and library files will be exported to the lib folder, runtime binaries will be installed to the bin folder and the path to installed headers is ``include``.
+  Archive and library files will be exported to the lib folder, runtime binaries will be installed to the bin folder and the path to installed headers is ``include``.
 
 .. note::
 
@@ -255,6 +255,8 @@ To use it for a package called ``my_library``:
 
     target_compile_definitions(my_library PRIVATE "MY_LIBRARY_BUILDING_LIBRARY")
 
+For more details, see :ref:`Windows Symbol Visibility in the Windows Tips and Tricks document <Windows_Symbol_Visibility>`.
+
 Testing and Linting
 -------------------
 
@@ -270,7 +272,7 @@ In order to separate testing from building the library with colcon, wrap all cal
 Linting
 ^^^^^^^
 
-It's advised to use the combined call from `ament_lint_auto <https://github.com/ament/ament_lint/blob/master/ament_lint_auto/doc/index.rst#ament_lint_auto>`_:
+It's advised to use the combined call from `ament_lint_auto <https://github.com/ament/ament_lint/blob/{REPOS_FILE_BRANCH}/ament_lint_auto/doc/index.rst#ament_lint_auto>`_:
 
 .. code-block:: cmake
 
@@ -279,10 +281,10 @@ It's advised to use the combined call from `ament_lint_auto <https://github.com/
 
 This will run linters as defined in the ``package.xml``.
 It is recommended to use the set of linters defined by the package ``ament_lint_common``.
-The individual linters included there, as well as their functions, can be seen in the `ament_lint_common docs <https://github.com/ament/ament_lint/blob/master/ament_lint_common/doc/index.rst>`_.
+The individual linters included there, as well as their functions, can be seen in the `ament_lint_common docs <https://github.com/ament/ament_lint/blob/{REPOS_FILE_BRANCH}/ament_lint_common/doc/index.rst>`_.
 
 Linters provided by ament can also be added separately, instead of running ``ament_lint_auto``.
-One example of how to do so can be found in the `ament_cmake_lint_cmake documentation <https://github.com/ament/ament_lint/blob/master/ament_cmake_lint_cmake/doc/index.rst>`_.
+One example of how to do so can be found in the `ament_cmake_lint_cmake documentation <https://github.com/ament/ament_lint/blob/{REPOS_FILE_BRANCH}/ament_cmake_lint_cmake/doc/index.rst>`_.
 
 Testing
 ^^^^^^^
@@ -324,13 +326,13 @@ The macros have additional parameters:
 
 - ``WORKING_DIRECTORY``: set the working directory for the test.
 
-The default working directory otherwise is the ``CMAKE_SOURCE_DIR``, which will be evaluated to the directory of the top-level ``CMakeLists.txt``.
+The default working directory otherwise is the ``CMAKE_CURRENT_BINARY_DIR``, which is described in the `CMake documentation <https://cmake.org/cmake/help/latest/variable/CMAKE_CURRENT_BINARY_DIR.html>`_.
 
 Similarly, there is a CMake macro to set up GTest including GMock:
 
 .. code-block:: cmake
 
-    find_package(ament_gmock REQUIRED)
+    find_package(ament_cmake_gmock REQUIRED)
     ament_add_gmock(some_test <test_sources>)
 
 It has the same additional parameters as ``ament_add_gtest``.
@@ -386,7 +388,7 @@ which registers the macro ``rosidl_generator_cpp_generate_interfaces.cmake`` for
 When the extension point gets executed, this will trigger the execution of the script ``rosidl_generator_cpp_generate_interfaces.cmake`` here.
 In particular, this will call the generator whenever the function ``rosidl_generate_interfaces`` gets executed.
 
-The most important extension point aside from ``rosidl_generate_interfaces`` for generators is ``ament_package``, which will simply execute scripts with the ``ament_package()`` call.
+The most important extension point for generators, aside from ``rosidl_generate_interfaces``, is ``ament_package``, which will simply execute scripts with the ``ament_package()`` call.
 This extension point is useful when registering resources (see below).
 
 ``ament_register_extension`` is a function which takes exactly three arguments:
@@ -431,7 +433,7 @@ This can be achieved using the ament index (also called "resource index").
 The ament index explained
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For details on the design and intentions, see `here <https://github.com/ament/ament_cmake/blob/master/ament_cmake_core/doc/resource_index.md>`__
+For details on the design and intentions, see `here <https://github.com/ament/ament_cmake/blob/{REPOS_FILE_BRANCH}/ament_cmake_core/doc/resource_index.md>`__
 
 In principle, the ament index is contained in a folder within the install/share folder of your package.
 It contains shallow subfolders named after different types of resources.

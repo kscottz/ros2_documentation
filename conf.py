@@ -61,7 +61,7 @@ default_role = 'any'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -122,12 +122,12 @@ templates_path = [
 
 # smv_tag_whitelist = None
 
-smv_branch_whitelist = r'^(rolling|galactic|foxy|eloquent|dashing|crystal)$'
+smv_branch_whitelist = r'^(rolling|humble|galactic|foxy|eloquent|dashing|crystal)$'
 
 
-smv_released_pattern = r'^refs/(heads|remotes/[^/]+)/(galactic|foxy|eloquent|dashing|crystal).*$'
+smv_released_pattern = r'^refs/(heads|remotes/[^/]+)/(humble|galactic|foxy|eloquent|dashing|crystal).*$'
 smv_remote_whitelist = r'^(origin)$'
-smv_latest_version = 'galactic'
+smv_latest_version = 'humble'
 smv_eol_versions = ['crystal', 'dashing', 'eloquent']
 
 distro_full_names = {
@@ -136,6 +136,7 @@ distro_full_names = {
     'eloquent': 'Eloquent Elusor',
     'foxy': 'Foxy Fitzroy',
     'galactic': 'Galactic Geochelone',
+    'humble': 'Humble Hawksbill',
     'rolling': 'Rolling Ridley',
 }
 
@@ -144,7 +145,7 @@ macros = {
     'DISTRO': 'rolling',
     'DISTRO_TITLE': 'Rolling',
     'DISTRO_TITLE_FULL': 'Rolling Ridley',
-    'REPOS_FILE_BRANCH': 'master',
+    'REPOS_FILE_BRANCH': 'rolling',
 }
 
 html_favicon = 'favicon.ico'
@@ -284,7 +285,7 @@ def smv_rewrite_configs(app, config):
             'DISTRO': distro,
             'DISTRO_TITLE': distro.title(),
             'DISTRO_TITLE_FULL': distro_full_names[distro],
-            'REPOS_FILE_BRANCH' : 'master' if distro == 'rolling' else distro,
+            'REPOS_FILE_BRANCH' : distro,
         }
 
 def github_link_rewrite_branch(app, pagename, templatename, context, doctree):

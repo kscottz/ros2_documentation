@@ -1,5 +1,5 @@
-Installing ROS 2 via RPM Packages
-=================================
+RHEL (RPM)
+==========
 
 .. contents:: Table of Contents
    :depth: 2
@@ -56,6 +56,8 @@ DNF may prompt you to verify the GPG key, which should match the location ``http
 Install ROS 2 packages
 ----------------------
 
+.. include:: _Dnf-Update-Admonition.rst
+
 Desktop Install (Recommended): ROS, RViz, demos, tutorials.
 
 .. code-block:: bash
@@ -79,6 +81,8 @@ Set up your environment by sourcing the following file.
 
 .. code-block:: bash
 
+   # Replace ".bash" with your shell if you're not using bash
+   # Possible values are: setup.bash, setup.sh, setup.zsh
    source /opt/ros/{DISTRO}/setup.bash
 
 Try some examples
@@ -106,7 +110,7 @@ Hooray!
 
 Next steps after installing
 ---------------------------
-Continue with the :doc:`tutorials and demos <../Tutorials>` to configure your environment, create your own workspace and packages, and learn ROS 2 core concepts.
+Continue with the :doc:`tutorials and demos <../../Tutorials>` to configure your environment, create your own workspace and packages, and learn ROS 2 core concepts.
 
 Additional RMW implementations (optional)
 -----------------------------------------
